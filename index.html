@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comfort Lux — Премиальная Мебель &amp; Индивидуальный Дизайн Интерьера</title>
+  <meta name="description" content="Comfort Lux — Производство премиальной мебели и авторских интерьерных решений по индивидуальным проектам. Эксклюзивные материалы, итальянская фурнитура и гарантия 10 лет.">
+  <meta name="keywords" content="премиальная мебель, Comfort Lux, мебель на заказ, элитная мебель, дизайнерская мебель, интерьер премиум класса">
+  
+  <!-- FontAwesome Icons & Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo" id="main-logo">
+        <img src="./assets/logo.jpg" alt="Comfort Lux Furniture Logo" class="logo-img">
+        <div class="logo-text-group">
+          <div class="logo-text">COMFORT <span>LUX</span></div>
+          <div class="logo-subtext">производство мебели</div>
+        </div>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#portfolio" class="nav-link">Портфолио</a></li>
+        <li><a href="#showroom" class="nav-link">Шоурум</a></li>
+        <li><a href="#faq" class="nav-link">FAQ</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="https://www.instagram.com/comfort_lux_furniture/" target="_blank" class="nav-social-img-btn" title="Instagram">
+          <img src="./assets/icon_instagram.png" alt="Instagram">
+        </a>
+        <a href="https://wa.me/77773440233" target="_blank" class="nav-social-img-btn" title="WhatsApp">
+          <img src="./assets/icon_whatsapp.png" alt="WhatsApp">
+        </a>
+        <div class="nav-phone">
+          <span class="phone-num">+7(777) 344-02-33</span>
+          <span class="phone-sub"><i class="fa-solid fa-circle" style="font-size: 6px; color: #25D366; vertical-align: middle;"></i> Шоурум открыт 10:00–21:00</span>
+        </div>
+        <button class="btn-primary btn-sm" id="btn-consultation-nav" onclick="openModal('modal-consultation')">
+          <i class="fa-solid fa-calendar-check"></i> Заказать проект
+        </button>
+      </div>
+
+      <div class="hamburger" id="hamburger" onclick="toggleMobileNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE NAV DRAWER -->
+  <div class="mobile-nav" id="mobile-nav">
+    <ul class="mobile-nav-links">
+      <li><a href="#portfolio" onclick="toggleMobileNav()">Портфолио</a></li>
+      <li><a href="#showroom" onclick="toggleMobileNav()">Шоурум</a></li>
+      <li><a href="#faq" onclick="toggleMobileNav()">Вопросы и ответы</a></li>
+      <li><a href="https://www.instagram.com/comfort_lux_furniture/" target="_blank" style="color: var(--gold-primary);"><img src="./assets/icon_instagram.png" alt="Instagram" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 6px;"> Instagram</a></li>
+      <li><a href="https://wa.me/77773440233" target="_blank" style="color: #25D366;"><img src="./assets/icon_whatsapp.png" alt="WhatsApp" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 6px;"> WhatsApp</a></li>
+    </ul>
+    <button class="btn-primary" onclick="toggleMobileNav(); openModal('modal-consultation');" style="margin-top: auto;">
+      <i class="fa-solid fa-phone"></i> Заказать консультацию
+    </button>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="./assets/hero_living_room.jpg" alt="Comfort Lux Премиальный Интерьер">
+    </div>
+    <div class="hero-overlay"></div>
+
+    <div class="container">
+      <div class="hero-content">
+        <div class="section-tag">Премиальное ателье мебели</div>
+        <h1 class="hero-title">Интерьеры, определяющие <span class="text-gold">высокий статус</span></h1>
+        <p class="hero-subtitle">
+          Студия Comfort Lux создаёт авторскую мебель и законченные архитектурные пространства по индивидуальным эскизам. Итальянский текстиль, мрамор Calacatta и немецкие технологии.
+        </p>
+
+        <div class="hero-btns">
+          <a href="#catalog" class="btn-primary">
+            <i class="fa-solid fa-compass"></i> Смотреть каталог
+          </a>
+          <button class="btn-outline" onclick="openModal('modal-samples')">
+            <i class="fa-solid fa-box-open"></i> Заказать каталог материалов
+          </button>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-number">7+</div>
+            <div class="stat-label">Лет безупречной работы</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">120+</div>
+            <div class="stat-label">Реализованных резиденций</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">10 лет</div>
+            <div class="stat-label">Официальная гарантия</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES / CRAFTSMANSHIP -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-gem"></i></div>
+          <h3 class="feature-title">Эксклюзивные материалы</h3>
+          <p class="feature-desc">Натуральный шпон редких пород дерева, мрамор Calacatta Gold, кожа Nappa и фурнитура Blum / Salice с пожизненной гарантией.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-cube"></i></div>
+          <h3 class="feature-title">3D-Моделирование &amp; VR</h3>
+          <p class="feature-desc">Разрабатываем фотореалистичную визуализацию каждого предмета мебели в контексте вашего готового интерьера до старта производства.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-industry"></i></div>
+          <h3 class="feature-title">Собственное фабричное ателье</h3>
+          <p class="feature-desc">Высокоточные немецкие станки с ЧПУ и ручное финишное сопряжение деталей итальянскими мастерами краснодеревщиками.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3 class="feature-title">Сервис Безупречности</h3>
+          <p class="feature-desc">Персональный архитектор проекта, быстрая бережная доставка в мягких контейнерах и аккуратная сборка за 1 день.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATALOG & COLLECTIONS -->
+  <section class="catalog" id="catalog">
+    <div class="container">
+      <div class="catalog-header">
+        <div class="section-tag">Эксклюзивная коллекция</div>
+        <h2 class="section-title">Каталог <span class="text-gold">Comfort Lux</span></h2>
+        <p class="section-desc">Каждая модель разрабатывается в единичном экземпляре с безупречным вниманием к эргономике и текстурам.</p>
+
+        <div class="filter-tabs" id="catalog-filters">
+          <button class="tab-btn active" data-filter="all">Все решения</button>
+          <button class="tab-btn" data-filter="living">Гостиная</button>
+          <button class="tab-btn" data-filter="dining">Столовые зоны</button>
+          <button class="tab-btn" data-filter="bedroom">Спальни</button>
+          <button class="tab-btn" data-filter="office">Кабинеты</button>
+          <button class="tab-btn" data-filter="wardrobe">Гардеробные</button>
+        </div>
+      </div>
+
+      <div class="catalog-grid" id="catalog-grid">
+        
+        <!-- Product 1 -->
+        <div class="product-card" data-category="living">
+          <div class="product-img-wrapper">
+            <img src="./assets/sofa_emerald.jpg" alt="Модульный диван Sovereign Emerald">
+            <span class="product-badge">Итальянский бархат</span>
+            <button class="product-quick-btn" onclick="openQuickView('sofa_emerald')" title="Быстрый просмотр">
+              <i class="fa-solid fa-eye"></i>
+            </button>
+          </div>
+          <div class="product-content">
+            <span class="product-category">Гостиная • Флагман</span>
+            <h3 class="product-title">Диван Sovereign Emerald</h3>
+            <p class="product-specs">Модульная система со структурой из массива бука, обивка из изумрудного велюра Loro Piana с золотым цоколем.</p>
+            <div class="product-footer">
+              <div class="product-price">
+                <span class="price-label">Стоимость от</span>
+                <span class="price-val">2 850 000 ₸</span>
+              </div>
+              <button class="btn-primary btn-sm" onclick="openModal('modal-consultation', 'Диван Sovereign Emerald')">Заказать</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card" data-category="dining">
+          <div class="product-img-wrapper">
+            <img src="./assets/dining_table.jpg" alt="Обеденная группа Imperia Marble">
+            <span class="product-badge">Calacatta Marble</span>
+            <button class="product-quick-btn" onclick="openQuickView('dining_table')" title="Быстрый просмотр">
+              <i class="fa-solid fa-eye"></i>
+            </button>
+          </div>
+          <div class="product-content">
+            <span class="product-category">Столовая зона</span>
+            <h3 class="product-title">Стол Imperia Marble</h3>
+            <p class="product-specs">Столешница из натурального мрамора Calacatta с антивандальным покрытием и подножием из сатинированной латуни.</p>
+            <div class="product-footer">
+              <div class="product-price">
+                <span class="price-label">Стоимость от</span>
+                <span class="price-val">3 700 000 ₸</span>
+              </div>
+              <button class="btn-primary btn-sm" onclick="openModal('modal-consultation', 'Стол Imperia Marble')">Заказать</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card" data-category="bedroom">
+          <div class="product-img-wrapper">
+            <img src="./assets/luxury_bed.jpg" alt="Кровать Master Suite Noir">
+            <span class="product-badge">Кожа Nappa</span>
+            <button class="product-quick-btn" onclick="openQuickView('luxury_bed')" title="Быстрый просмотр">
+              <i class="fa-solid fa-eye"></i>
+            </button>
+          </div>
+          <div class="product-content">
+            <span class="product-category">Спальная резиденция</span>
+            <h3 class="product-title">Кровать Master Suite</h3>
+            <p class="product-specs">Анатомический каркас, изголовье с каретной стяжкой из мягкой кожи Nappa и парящей светодиодной подсветкой.</p>
+            <div class="product-footer">
+              <div class="product-price">
+                <span class="price-label">Стоимость от</span>
+                <span class="price-val">3 200 000 ₸</span>
+              </div>
+              <button class="btn-primary btn-sm" onclick="openModal('modal-consultation', 'Кровать Master Suite')">Заказать</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card" data-category="office">
+          <div class="product-img-wrapper">
+            <img src="./assets/executive_desk.jpg" alt="Письменный стол Executive Noir">
+            <span class="product-badge">Мореный орех</span>
+            <button class="product-quick-btn" onclick="openQuickView('executive_desk')" title="Быстрый просмотр">
+              <i class="fa-solid fa-eye"></i>
+            </button>
+          </div>
+          <div class="product-content">
+            <span class="product-category">Кабинет руководителя</span>
+            <h3 class="product-title">Стол Executive Noir</h3>
+            <p class="product-specs">Массив мореного американского ореха, вставки из натуральной кожи и скрытые беспроводные зарядные станции.</p>
+            <div class="product-footer">
+              <div class="product-price">
+                <span class="price-label">Стоимость от</span>
+                <span class="price-val">2 300 000 ₸</span>
+              </div>
+              <button class="btn-primary btn-sm" onclick="openModal('modal-consultation', 'Стол Executive Noir')">Заказать</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-card" data-category="wardrobe">
+          <div class="product-img-wrapper">
+            <img src="./assets/walkin_wardrobe.jpg" alt="Гардеробный комплекс Atelier Glass">
+            <span class="product-badge">Стекло &amp; Подсветка</span>
+            <button class="product-quick-btn" onclick="openQuickView('walkin_wardrobe')" title="Быстрый просмотр">
+              <i class="fa-solid fa-eye"></i>
+            </button>
+          </div>
+          <div class="product-content">
+            <span class="product-category">Гардеробная</span>
+            <h3 class="product-title">Гардеробная Atelier Glass</h3>
+            <p class="product-specs">Профиль из анодированного алюминия, тонированное фасадное стекло, замшевые выдвижные органайзеры и мраморный остров.</p>
+            <div class="product-footer">
+              <div class="product-price">
+                <span class="price-label">Стоимость от</span>
+                <span class="price-val">5 300 000 ₸</span>
+              </div>
+              <button class="btn-primary btn-sm" onclick="openModal('modal-consultation', 'Гардеробная Atelier Glass')">Заказать</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product-card" data-category="living">
+          <div class="product-img-wrapper">
+            <img src="./assets/lounge_chair.jpg" alt="Кресло Lounge Bouclé">
+            <span class="product-badge">Ткань Букле</span>
+            <button class="product-quick-btn" onclick="openQuickView('lounge_chair')" title="Быстрый просмотр">
+              <i class="fa-solid fa-eye"></i>
+            </button>
+          </div>
+          <div class="product-content">
+            <span class="product-category">Лаунж зона</span>
+            <h3 class="product-title">Кресло Lounge Bouclé</h3>
+            <p class="product-specs">Скульптурное дизайнерское кресло с обивкой из фактурной альпийской ткани букле и ножками из американского ореха.</p>
+            <div class="product-footer">
+              <div class="product-price">
+                <span class="price-label">Стоимость от</span>
+                <span class="price-val">1 250 000 ₸</span>
+              </div>
+              <button class="btn-primary btn-sm" onclick="openModal('modal-consultation', 'Кресло Lounge Bouclé')">Заказать</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE FURNITURE & MATERIAL CUSTOMIZER -->
+  <section class="customizer" id="customizer">
+    <div class="container">
+      <div class="section-tag" style="text-align: center; display: block;">Онлайн ателье</div>
+      <h2 class="section-title" style="text-align: center;">Интерактивный <span class="text-gold">Конфигуратор</span></h2>
+      <p class="section-desc" style="text-align: center; margin-left: auto; margin-right: auto;">Выберите обивку, породу дерева и отделку фурнитуры в реальном времени.</p>
+
+      <div class="customizer-box glass-card">
+        <div class="customizer-preview">
+          <span class="customizer-badge" id="customizer-badge-text">Модель: Sovereign Modular</span>
+          <img src="./assets/sofa_emerald.jpg" id="customizer-image" alt="Конфигуратор мебели Comfort Lux">
+        </div>
+
+        <div class="customizer-controls">
+          
+          <!-- Option 1: Material -->
+          <div class="custom-option-group">
+            <div class="option-label">Материал обивки: <span id="sel-material-name">Изумрудный Бархат (Италия)</span></div>
+            <div class="swatch-picker">
+              <div class="swatch active" style="background: #1B4D3E;" data-name="Изумрудный Бархат" data-img="./assets/sofa_emerald.jpg" data-price-add="0" onclick="updateCustomizerMaterial(this)"></div>
+              <div class="swatch" style="background: #D4AF37;" data-name="Золотой Велюр" data-img="./assets/hero_living_room.jpg" data-price-add="210000" onclick="updateCustomizerMaterial(this)"></div>
+              <div class="swatch" style="background: #E8E5DF;" data-name="Альпийское Букле" data-img="./assets/lounge_chair.jpg" data-price-add="120000" onclick="updateCustomizerMaterial(this)"></div>
+              <div class="swatch" style="background: #2D251E;" data-name="Кожа Nappa Cognac" data-img="./assets/luxury_bed.jpg" data-price-add="390000" onclick="updateCustomizerMaterial(this)"></div>
+            </div>
+          </div>
+
+          <!-- Option 2: Finish -->
+          <div class="custom-option-group">
+            <div class="option-label">Отделка цоколя / подножия: <span id="sel-finish-name">Матовая Шампань Латунь</span></div>
+            <div class="swatch-picker">
+              <div class="swatch active" style="background: linear-gradient(135deg, #F3E3A6, #D4AF37);" data-finish="Шампань Латунь" data-price-finish="0" onclick="updateCustomizerFinish(this)"></div>
+              <div class="swatch" style="background: #1A1A1A;" data-finish="Черный Матовый Чёрный" data-price-finish="60000" onclick="updateCustomizerFinish(this)"></div>
+              <div class="swatch" style="background: #B87333;" data-finish="Полированная Медь" data-price-finish="150000" onclick="updateCustomizerFinish(this)"></div>
+            </div>
+          </div>
+
+          <!-- Option 3: Size -->
+          <div class="custom-option-group">
+            <div class="option-label">Габариты: <span id="sel-size-name">320 х 210 см (Трехместный + Лаунж)</span></div>
+            <select class="form-select" id="customizer-size-select" onchange="updateCustomizerSize(this)">
+              <option value="0" data-size-text="320 х 210 см (Стандарт)">320 х 210 см (Стандарт)</option>
+              <option value="500000" data-size-text="410 х 260 см (Увеличенный с оттоманкой)">410 х 260 см (Увеличенный с оттоманкой) +500 000 ₸</option>
+              <option value="850000" data-size-text="Индивидуальный размер под проект">Индивидуальный размер под проект +850 000 ₸</option>
+            </select>
+          </div>
+
+          <div class="customizer-summary">
+            <div>
+              <span style="font-size: 0.85rem; color: var(--text-muted);">Итоговая стоимость конфигурации:</span>
+              <div class="calc-price" id="customizer-final-price">2 850 000 ₸</div>
+            </div>
+            <button class="btn-primary" onclick="openModal('modal-consultation', 'Конфигурация Sovereign')">
+              <i class="fa-solid fa-paper-plane"></i> Сохранить спецификацию
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALCULATOR SECTION -->
+  <section class="calculator" id="calculator">
+    <div class="container">
+      <div class="calc-wrapper glass-card">
+        <div class="section-tag" style="text-align: center; display: block;">Онлайн Расчет</div>
+        <h2 class="section-title" style="text-align: center;">Калькулятор стоимости <span class="text-gold">проекта</span></h2>
+        <p class="section-desc" style="text-align: center; margin-left: auto; margin-right: auto;">Рассчитайте предварительный бюджет комплексной меблировки вашего пространства.</p>
+
+        <div class="calc-steps">
+          
+          <!-- Step 1: Type -->
+          <div>
+            <div class="calc-step-header"><i class="fa-solid fa-house-laptop"></i> 1. Выберите тип помещения</div>
+            <div class="calc-options-grid" id="calc-type-grid">
+              <div class="calc-card selected" data-type-rate="110000" onclick="selectCalcType(this)">
+                <i class="fa-solid fa-couch"></i>
+                <div class="calc-card-title">Гостиная / Апартаменты</div>
+              </div>
+              <div class="calc-card" data-type-rate="135000" onclick="selectCalcType(this)">
+                <div class="calc-card-title">Спальня + Гардероб</div>
+                <i class="fa-solid fa-bed" style="margin-top: 0.5rem;"></i>
+              </div>
+              <div class="calc-card" data-type-rate="150000" onclick="selectCalcType(this)">
+                <i class="fa-solid fa-utensils"></i>
+                <div class="calc-card-title">Кухня-Столовая</div>
+              </div>
+              <div class="calc-card" data-type-rate="195000" onclick="selectCalcType(this)">
+                <i class="fa-solid fa-building-user"></i>
+                <div class="calc-card-title">Вся Резиденция / Пентхаус</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2: Area Slider -->
+          <div>
+            <div class="calc-step-header"><i class="fa-solid fa-ruler-combined"></i> 2. Укажите ориентировочную площадь (м²)</div>
+            <div class="range-slider-wrap">
+              <div class="range-val-disp"><span id="calc-area-val">65</span> м²</div>
+              <input type="range" id="calc-area-range" min="20" max="350" value="65" oninput="updateCalc()">
+            </div>
+          </div>
+
+          <!-- Step 3: Material Tier -->
+          <div>
+            <div class="calc-step-header"><i class="fa-solid fa-layer-group"></i> 3. Класс отделочных материалов</div>
+            <div class="calc-options-grid" id="calc-tier-grid">
+              <div class="calc-card" data-tier-mult="1.0" onclick="selectCalcTier(this)">
+                <div class="calc-card-title">Lux (Массив, Blum, Шпон)</div>
+              </div>
+              <div class="calc-card selected" data-tier-mult="1.35" onclick="selectCalcTier(this)">
+                <div class="calc-card-title">Premium Gold (Мрамор, Кожа Nappa, Латунь)</div>
+              </div>
+              <div class="calc-card" data-tier-mult="1.75" onclick="selectCalcTier(this)">
+                <div class="calc-card-title">Bespoke Royal (Эксклюзивы Loro Piana &amp; Рарные породы)</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Result -->
+          <div class="calc-result-box">
+            <div>
+              <span style="font-size: 0.9rem; color: var(--text-muted);">Ориентировочная стоимость проекта:</span>
+              <div class="calc-result-price" id="calc-total-result">9 652 500 ₸</div>
+            </div>
+            <button class="btn-primary" onclick="openModal('modal-consultation', 'Смета проекта из калькулятора')">
+              <i class="fa-solid fa-calculator"></i> Получить детальную смету
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO SHOWCASE -->
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <div class="section-tag">Галерея объектов</div>
+      <h2 class="section-title">Реализованные <span class="text-gold">проекты Comfort Lux</span></h2>
+      <p class="section-desc">Взгляните на готовые частные интерьеры в ЖК премиум-класса и загородных резиденциях.</p>
+
+      <div class="portfolio-grid">
+        <div class="portfolio-item large">
+          <img src="./assets/hero_living_room.jpg" alt="Пентхаус на Патриарших">
+          <div class="portfolio-overlay">
+            <span class="portfolio-cat">Частная резиденция • 280 м²</span>
+            <h3 class="portfolio-title">Пентхаус в центре</h3>
+            <span class="portfolio-location">Полная меблировка и стеновые панели из американского ореха</span>
+          </div>
+        </div>
+
+        <div class="portfolio-item small">
+          <img src="./assets/executive_desk.jpg" alt="Кабинет руководителя">
+          <div class="portfolio-overlay">
+            <span class="portfolio-cat">Офис руководителя</span>
+            <h3 class="portfolio-title">Бизнес-центр Premium</h3>
+            <span class="portfolio-location">Авторский стол и кожаная отделка</span>
+          </div>
+        </div>
+
+        <div class="portfolio-item small">
+          <img src="./assets/walkin_wardrobe.jpg" alt="Гардеробная вилла">
+          <div class="portfolio-overlay">
+            <span class="portfolio-cat">Загородная вилла</span>
+            <h3 class="portfolio-title">Вилла в Загородном Комплексе</h3>
+            <span class="portfolio-location">Островная гардеробная с подсвеченным стеклом</span>
+          </div>
+        </div>
+
+        <div class="portfolio-item large">
+          <img src="./assets/dining_table.jpg" alt="Резиденция">
+          <div class="portfolio-overlay">
+            <span class="portfolio-cat">Загородная Резиденция</span>
+            <h3 class="portfolio-title">Столовая зона в особняке</h3>
+            <span class="portfolio-location">Стол из Calacatta Gold и 12 авторских кресел</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS TIMELINE -->
+  <section class="process" id="process">
+    <div class="container">
+      <div class="section-tag" style="text-align: center; display: block;">Этапы воплощения</div>
+      <h2 class="section-title" style="text-align: center;">Как мы работаем <span class="text-gold">над вашим заказом</span></h2>
+      <p class="section-desc" style="text-align: center; margin-left: auto; margin-right: auto;">Прозрачный путь от первой встречи в шоуруме до монтажа безупречного интерьера.</p>
+
+      <div class="process-grid">
+        <div class="process-step">
+          <div class="step-num">01</div>
+          <h3 class="step-title">Консультация &amp; Замер</h3>
+          <p class="step-desc">Выезд ведущего инженера-конструктора с лазерными сканерами и образцами материалов прямо на ваш объект.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="step-num">02</div>
+          <h3 class="step-title">3D-Проект &amp; Смета</h3>
+          <p class="step-desc">Создание точных 3D-моделей и утверждение финального альбома спецификаций с фиксированной стоимостью.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="step-num">03</div>
+          <h3 class="step-title">Фабричное Производство</h3>
+          <p class="step-desc">Изготовление мебели на высокоточных станках в течение 25–35 рабочих дней под строгим контролем ОТК.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="step-num">04</div>
+          <h3 class="step-title">Монтаж &amp; Гарантия</h3>
+          <p class="step-desc">Доставка в специализированной защитной упаковке, чистый монтаж за 24 часа и выдача паспорта гарантии на 10 лет.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOWROOM SECTION -->
+  <section class="showroom" id="showroom">
+    <div class="container">
+      <div class="showroom-grid">
+        <div class="showroom-img-box">
+          <img src="./assets/showroom_interior.jpg" alt="Флагманский шоурум Comfort Lux">
+        </div>
+
+        <div class="showroom-info">
+          <div class="section-tag">Флагманский Шоурум</div>
+          <h2 class="section-title">Приглашаем в мир <span class="text-gold">Comfort Lux</span></h2>
+          <p class="section-desc">Оцените тактильные ощущения от премиального текстиля, проверьте плавность механизмов и обсудите ваш проект за чашкой авторского кофе в приватной гостиной.</p>
+
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="info-text">
+              <h4>Адрес шоурума:</h4>
+              <p>г. Алматы, пр. Аль-Фараби, д. 77/7 (Art Design District)</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+            <div class="info-text">
+              <h4>Часы работы:</h4>
+              <p>Ежедневно с 10:00 до 21:00 (по предварительной записи доступен паркинг)</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-solid fa-user-shield"></i></div>
+            <div class="info-text">
+              <h4>Персональный прием:</h4>
+              <p>Индивидуальная встреча с шеф-дизайнером Comfort Lux</p>
+            </div>
+          </div>
+
+          <button class="btn-primary" onclick="openModal('modal-consultation', 'Запись в шоурум')" style="align-self: flex-start; margin-top: 1rem;">
+            <i class="fa-solid fa-mug-hot"></i> Забронировать визит
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-tag" style="text-align: center; display: block;">Отзывы и Доверие</div>
+      <h2 class="section-title" style="text-align: center;">Что говорят <span class="text-gold">наши клиенты</span></h2>
+      <p class="section-desc" style="text-align: center; margin-left: auto; margin-right: auto;">Мы гордимся репутацией среди ведущих архитекторов и владельцев премиальной недвижимости.</p>
+
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <div class="rating-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-text">«Заказывали полный комплект мебели для апартаментов 300 м². Точность совпадения 3D-рендеров с готовыми изделиями — 100%! Шпон ореха и стыки мрамора выполнены ювелирно.»</p>
+          <div class="author-info">
+            <div class="author-avatar">АВ</div>
+            <div>
+              <div class="author-name">Александр Волков</div>
+              <div class="author-role">Владелец апартаментов</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="rating-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-text">«Как архитектор, я всегда требовательна к деталям. С Comfort Lux мы реализовали уже 5 сложных объектов. Ребята берутся за эксклюзивные чертежи любой сложности.»</p>
+          <div class="author-info">
+            <div class="author-avatar">ЕК</div>
+            <div>
+              <div class="author-name">Елена Ковалева</div>
+              <div class="author-role">Основатель Kovaleva Architecture Studio</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="rating-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-text">«Особая благодарность за диван Sovereign. Невероятный изумрудный бархат и идеальная мягкость посадки. Шоурум и сервис на высшем европейском уровне!»</p>
+          <div class="author-info">
+            <div class="author-avatar">МД</div>
+            <div>
+              <div class="author-name">Михаил Давыдов</div>
+              <div class="author-role">Клиент Comfort Lux</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-tag" style="text-align: center; display: block;">Вопросы и Ответы</div>
+      <h2 class="section-title" style="text-align: center;">Часто задаваемые <span class="text-gold">вопросы</span></h2>
+
+      <div class="faq-container">
+        
+        <div class="faq-item active">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            Каковы сроки изготовления мебели по индивидуальному проекту?
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Стандартный срок производства составляет от 25 до 35 рабочих дней в зависимости от сложности конструкции и наличия редких отделочных материалов (например, мрамора Calacatta или редкого шпона). Срочные заказы обсуждаются индивидуально.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            Предоставляете ли вы гарантию на мебель и механизмы?
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Да, на всю корпусную и мягкую мебель Comfort Lux мы даём официальную расширенную гарантию 10 лет. На фурнитуру премиум-сегмента (Blum, Salice) действует пожизненная заводская гарантия.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            Можно ли приехать с готовым дизайн-проектом от стороннего архитектора?
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Безусловно! Мы регулярно работаем по чертежам и эскизам сторонних дизайнерских бюро. Наши технологи адаптируют спецификации под идеальное фабричное исполнение.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            Как происходит доставка и сборка на объекте?
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Доставка осуществляется на собственном специализированном транспорте в войлочных защитных боксах. Сборку выполняют штатные аккредитованные мастера Comfort Lux с полным клинингом помещения после монтажа.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-box">
+        <h2 class="section-title">Готовы создать <span class="text-gold">интерьер мечты?</span></h2>
+        <p class="section-desc" style="margin-bottom: 2rem;">Оставьте заявку прямо сейчас и получите бесплатный 3D-эскиз мебели и набор образцов европейского текстиля с выездом дизайнера.</p>
+        <button class="btn-primary" onclick="openModal('modal-consultation')">
+          <i class="fa-solid fa-wand-magic-sparkles"></i> Запросить бесплатный 3D-проект
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="#" class="logo" style="margin-bottom: 1.25rem; display: inline-flex;">
+            <img src="./assets/logo.jpg" alt="Comfort Lux Furniture Logo" class="logo-img">
+            <div class="logo-text-group">
+              <div class="logo-text" style="color: #FFFFFF;">COMFORT <span style="color: var(--gold-light);">LUX</span></div>
+              <div class="logo-subtext" style="color: var(--gold-light);">производство мебели</div>
+            </div>
+          </a>
+          <p style="color: #A5A9B4; font-size: 0.92rem; line-height: 1.6; max-width: 340px;">
+            Производство премиальной авторской мебели и комплектация резиденций люкс-сегмента. Итальянские традиции, немецкая точность.
+          </p>
+          <div class="social-links">
+            <a href="https://wa.me/77773440233" target="_blank" class="social-img-icon" title="WhatsApp"><img src="./assets/icon_whatsapp.png" alt="WhatsApp"></a>
+            <a href="https://www.instagram.com/comfort_lux_furniture/" target="_blank" class="social-img-icon" title="Instagram"><img src="./assets/icon_instagram.png" alt="Instagram"></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Контакты</h4>
+          <ul class="footer-links">
+            <li style="color: #FFFFFF; font-weight: 600; font-size: 1.05rem;">+7 (747) 247-07-97</li>
+            <li style="color: var(--gold-light);">info@comfortlux-interior.kz</li>
+            <li style="color: #A5A9B4; font-size: 0.9rem;">г. Алматы, пр. Аль-Фараби, д. 77/7</li>
+            <li style="color: #A5A9B4; font-size: 0.85rem;">Паркинг для клиентов шоурума</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Comfort Lux Atelier. Все права защищены. Элитная мебель по индивидуальным проектам.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="#" style="color: #7D818C;">Политика конфиденциальности</a>
+          <a href="#" style="color: #7D818C;">Публичная оферта</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP PILL -->
+  <a href="https://wa.me/77773440233" target="_blank" class="floating-contact" title="Связаться в WhatsApp">
+    <div class="floating-icon-wrapper"><img src="./assets/icon_whatsapp.png" alt="WhatsApp" style="width: 34px; height: 34px; border-radius: 8px;"></div>
+    <span style="font-weight: 600; font-size: 0.88rem;">WhatsApp</span>
+  </a>
+
+  <!-- MODAL 1: CONSULTATION / PROJECT REQUEST -->
+  <div class="modal-backdrop" id="modal-consultation">
+    <div class="modal-card">
+      <div class="modal-close" onclick="closeModal('modal-consultation')"><i class="fa-solid fa-xmark"></i></div>
+      <h3 class="section-title" style="font-size: 1.8rem; margin-bottom: 0.5rem;">Заказать <span class="text-gold">Проект</span></h3>
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;" id="modal-project-subtitle">Оставьте ваши данные, и шеф-дизайнер Comfort Lux свяжется с вами в течение 15 минут.</p>
+
+      <form id="form-consultation" onsubmit="handleFormSubmit(event, 'Консультация забронирована!')">
+        <div class="form-group">
+          <label class="form-label">Ваше имя *</label>
+          <input type="text" class="form-input" placeholder="Александр" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Телефон / WhatsApp *</label>
+          <input type="tel" class="form-input" placeholder="+7 (747) 247-07-97" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Тип мебели или помещения</label>
+          <select class="form-select" id="modal-select-item">
+            <option value="Комплексный дизайн-проект">Комплексный дизайн-проект всей квартиры/дома</option>
+            <option value="Диван Sovereign Emerald">Диван Sovereign Emerald</option>
+            <option value="Стол Imperia Marble">Стол Imperia Marble</option>
+            <option value="Кровать Master Suite">Кровать Master Suite</option>
+            <option value="Гардеробный комплекс Atelier">Гардеробный комплекс Atelier</option>
+            <option value="Индивидуальный эскиз">Индивидуальный эскиз по моим чертежам</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Пожелания к проекту (необязательно)</label>
+          <textarea class="form-textarea" rows="3" placeholder="Укажите ориентировочные размеры или предпочтения в материалах..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="width: 100%; margin-top: 0.5rem;">
+          <i class="fa-solid fa-paper-plane"></i> Отправить заявку
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL 2: MATERIAL SAMPLE ORDER -->
+  <div class="modal-backdrop" id="modal-samples">
+    <div class="modal-card">
+      <div class="modal-close" onclick="closeModal('modal-samples')"><i class="fa-solid fa-xmark"></i></div>
+      <h3 class="section-title" style="font-size: 1.8rem; margin-bottom: 0.5rem;">Заказ <span class="text-gold">Образцов</span></h3>
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Мы привезём бокс с образцами итальянских тканей, кожи Nappa и спилов натурального дерева курьером прямо на ваш объект.</p>
+
+      <form id="form-samples" onsubmit="handleFormSubmit(event, 'Заявка на образцы принята! Курьер свяжется с вами.')">
+        <div class="form-group">
+          <label class="form-label">Ваше имя *</label>
+          <input type="text" class="form-input" placeholder="Константин" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Телефон *</label>
+          <input type="tel" class="form-input" placeholder="+7 (747) 247-07-97" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Адрес доставки бокса *</label>
+          <input type="text" class="form-input" placeholder="г. Алматы, пр. Достык 105" required>
+        </div>
+        <button type="submit" class="btn-primary" style="width: 100%; margin-top: 0.5rem;">
+          <i class="fa-solid fa-box"></i> Заказать выездной бокс
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL 3: QUICK VIEW MODAL -->
+  <div class="modal-backdrop" id="modal-quickview">
+    <div class="modal-card" style="max-width: 780px;">
+      <div class="modal-close" onclick="closeModal('modal-quickview')"><i class="fa-solid fa-xmark"></i></div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center;" id="quickview-content-wrapper">
+        <img src="" id="qv-img" style="border-radius: 8px; width: 100%; aspect-ratio: 4/3; object-fit: cover;" alt="Quick View">
+        <div>
+          <span class="product-category" id="qv-category">Категория</span>
+          <h3 class="product-title" id="qv-title" style="font-size: 1.6rem; margin-bottom: 0.75rem;">Название</h3>
+          <p class="product-specs" id="qv-specs" style="margin-bottom: 1.5rem;">Описание спецификации...</p>
+          <div style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--gold-primary); font-weight: 700; margin-bottom: 1.5rem;" id="qv-price">0 ₸</div>
+          <button class="btn-primary" id="qv-btn-order" onclick="closeModal('modal-quickview'); openModal('modal-consultation');">
+            <i class="fa-solid fa-cart-shopping"></i> Заказать этот предмет
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- JAVASCRIPT -->
+  <script src="app.js"></script>
+</body>
+</html>
