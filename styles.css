@@ -1335,75 +1335,90 @@ input[type="range"] {
 
 /* FOOTER */
 .footer {
-  background: #111317;
+  background: #0f1012;
   color: #FAF8F5;
-  padding: 5rem 0 2rem;
-  border-top: 1px solid var(--border-gold);
+  padding: 4.5rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .footer-grid {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 3rem;
-  margin-bottom: 4rem;
+  gap: 2.5rem;
   flex-wrap: wrap;
 }
 
-.footer-col h4 {
-  font-family: var(--font-heading);
-  font-size: 1.15rem;
+.footer-col-brand {
+  max-width: 360px;
+}
+
+.footer-brand-desc {
+  color: #A5A9B4;
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+.footer-title {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
   color: #FFFFFF;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
+  font-weight: 700;
 }
 
 .footer-links {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
-}
-.footer-links a {
-  color: #A5A9B4;
-  font-size: 0.92rem;
-}
-.footer-links a:hover {
-  color: var(--gold-light);
+  gap: 0.75rem;
 }
 
-.social-links {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
-.social-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+.footer-phone {
   color: #FFFFFF;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: var(--transition-fast);
-}
-.social-icon:hover {
-  border-color: var(--gold-light);
-  color: var(--gold-light);
-  transform: translateY(-3px);
+  font-weight: 400;
+  font-size: 1rem;
 }
 
-.footer-bottom {
-  padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+.footer-email {
+  color: var(--gold-light);
+  font-size: 0.95rem;
+}
+
+.footer-address {
+  color: #FFFFFF;
+  font-size: 0.95rem;
+}
+
+.footer-col-social {
   display: flex;
+  justify-content: flex-end;
+  align-self: center;
+}
+
+.footer-social-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
   align-items: center;
-  justify-content: space-between;
-  font-size: 0.85rem;
-  color: #7D818C;
-  flex-wrap: wrap;
-  gap: 1rem;
+}
+
+.footer-social-btn {
+  display: inline-flex;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.footer-social-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.footer-social-btn:hover {
+  transform: scale(1.08);
+  filter: brightness(1.15);
 }
 
 /* MODALS */

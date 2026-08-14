@@ -1,0 +1,97 @@
+{
+  "phone": "+7(777) 344-02-33",
+  "whatsapp": "https://wa.me/77087760027",
+  "instagram": "https://www.instagram.com/comfort_lux_furniture/",
+  "showroom_hours": "10:00–21:00",
+  "showroom_hours_detail": "Ежедневно с 10:00 до 21:00 (по предварительной записи доступен паркинг)",
+  "hero": {
+    "title": "Интерьеры, определяющие <span class=\"text-gold\">высокий статус</span>",
+    "subtitle": "Студия Comfort Lux создаёт авторскую мебель и законченные архитектурные пространства по индивидуальным эскизам. Итальянский текстиль, мрамор Calacatta и немецкие технологии."
+  },
+  "studio_description": "Оцените тактильные ощущения от премиального текстиля, проверьте плавность механизмов и обсудите ваш проект за чашкой авторского кофе в приватной гостиной.",
+  "buttons": {
+    "view_catalog": "Смотреть каталог",
+    "order_samples": "Заказать каталог материалов",
+    "order_project": "Заказать проект"
+  },
+  "stats": {
+    "years_num": "7+",
+    "years_label": "Лет безупречной работы",
+    "residences_num": "120+",
+    "residences_label": "Реализованных резиденций",
+    "warranty_num": "10 лет",
+    "warranty_label": "Официальная гарантия"
+  },
+  "catalog": [
+    {
+      "id": "sofa_emerald",
+      "title": "Диван Sovereign Emerald",
+      "category": "living",
+      "category_label": "Гостиная • Флагман",
+      "badge": "Итальянский бархат",
+      "specs": "Модульная система со структурой из массива бука, обивка из изумрудного велюра Loro Piana с золотым цоколем.",
+      "price": "2 850 000 ₸",
+      "img": "./assets/sofa_emerald.jpg"
+    },
+    {
+      "id": "dining_table",
+      "title": "Стол Imperia Marble",
+      "category": "dining",
+      "category_label": "Столовая зона",
+      "badge": "Calacatta Marble",
+      "specs": "Столешница из натурального мрамора Calacatta с антивандальным покрытием и подножием из сатинированной латуни.",
+      "price": "3 700 000 ₸",
+      "img": "./assets/dining_table.jpg"
+    },
+    {
+      "id": "luxury_bed",
+      "title": "Кровать Master Suite",
+      "category": "bedroom",
+      "category_label": "Спальная резиденция",
+      "badge": "Кожа Nappa",
+      "specs": "Анатомический каркас, изголовье с каретной стяжкой из мягкой кожи Nappa и парящей светодиодной подсветкой.",
+      "price": "3 200 000 ₸",
+      "img": "./assets/luxury_bed.jpg"
+    },
+    {
+      "id": "executive_desk",
+      "title": "Стол Executive Noir",
+      "category": "office",
+      "category_label": "Кабинет руководителя",
+      "badge": "Мореный орех",
+      "specs": "Массив мореного американского ореха, вставки из натуральной кожи и скрытые беспроводные зарядные станции.",
+      "price": "2 300 000 ₸",
+      "img": "./assets/executive_desk.jpg"
+    },
+    {
+      "id": "walkin_wardrobe",
+      "title": "Гардеробная Atelier Glass",
+      "category": "wardrobe",
+      "category_label": "Гардеробная",
+      "badge": "Стекло & Подсветка",
+      "specs": "Профиль из анодированного алюминия, тонированное фасадное стекло, замшевые выдвижные органайзеры и мраморный остров.",
+      "price": "5 300 000 ₸",
+      "img": "./assets/walkin_wardrobe.jpg"
+    },
+    {
+      "id": "lounge_chair",
+      "title": "Кресло Lounge Bouclé",
+      "category": "living",
+      "category_label": "Лаунж зона",
+      "badge": "Ткань Букле",
+      "specs": "Скульптурное дизайнерское кресло с обивкой из фактурной альпийской ткани букле и ножками из американского ореха.",
+      "price": "1 250 000 ₸",
+      "img": "./assets/lounge_chair.jpg"
+    },
+    {
+      "id": "item_258514",
+      "title": "Шкаф",
+      "category": "wardrobe",
+      "category_label": "Шкаф",
+      "badge": "Классика",
+      "price": "2500000",
+      "specs": "Работаем качественно, аккуратно и с гарантией.\nОт замера до установки — сопровождаем на каждом этапе.",
+      "img": "./assets/uploads/17cd8a304e_SaveClip.App_641364827_18427245121141539_5020273700148827295_n.jpg"
+    }
+  ]
+}

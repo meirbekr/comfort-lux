@@ -62,14 +62,51 @@ function toggleMobileNav() {
   mobileNav.classList.toggle('active');
 }
 
-// 3. Catalog Filter Tabs
-document.addEventListener('DOMContentLoaded', () => {
+// Helper to resolve dot-separated path in object
+function getValueByPath(obj, path) {
+  if (!obj || !path) return null;
+  return path.split('.').reduce((acc, part) => (acc && acc[part] !== undefined) ? acc[part] : null, obj);
+}
+
+// Render dynamic catalog items
+function renderCatalogGrid(catalog) {
+  const grid = document.getElementById('catalog-grid');
+  if (!grid || !Array.isArray(catalog)) return;
+
+  grid.innerHTML = catalog.map(item => `
+    <div class="product-card" data-category="${item.category || 'living'}">
+      <div class="product-img-wrapper">
+        <img src="${item.img || ''}" alt="${item.title || ''}">
+        ${item.badge ? `<span class="product-badge">${item.badge}</span>` : ''}
+        <button class="product-quick-btn" onclick="openQuickView('${item.id}')" title="Быстрый просмотр">
+          <i class="fa-solid fa-eye"></i>
+        </button>
+      </div>
+      <div class="product-content">
+        <span class="product-category">${item.category_label || item.category || ''}</span>
+        <h3 class="product-title">${item.title || ''}</h3>
+        <p class="product-specs">${item.specs || ''}</p>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="price-label">Стоимость от</span>
+            <span class="price-val">${item.price || ''}</span>
+          </div>
+          <button class="btn-primary btn-sm" onclick="openModal('modal-consultation', '${(item.title || '').replace(/'/g, "\\'")}')">Заказать</button>
+        </div>
+      </div>
+    </div>
+  `).join('');
+
+  // Re-bind filter events to existing tabs
+  bindCatalogFilterEvents();
+}
+
+function bindCatalogFilterEvents() {
   const filterBtns = document.querySelectorAll('#catalog-filters .tab-btn');
   const productCards = document.querySelectorAll('#catalog-grid .product-card');
 
   filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      // Remove active class
+    btn.onclick = () => {
       filterBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
@@ -84,10 +121,55 @@ document.addEventListener('DOMContentLoaded', () => {
           card.style.display = 'none';
         }
       });
-    });
+    };
   });
+}
 
-  // Initial calculation
+// Fetch content.json and populate DOM
+async function loadDynamicContent() {
+  try {
+    const response = await fetch('content.json');
+    if (!response.ok) return;
+    const content = await response.json();
+
+    document.querySelectorAll('[data-content]').forEach(elem => {
+      const key = elem.getAttribute('data-content');
+      const val = getValueByPath(content, key);
+      if (val !== null && val !== undefined) {
+        elem.innerHTML = val;
+      }
+    });
+
+    document.querySelectorAll('[data-content-href]').forEach(elem => {
+      const key = elem.getAttribute('data-content-href');
+      const val = getValueByPath(content, key);
+      if (val !== null && val !== undefined) {
+        elem.href = val;
+      }
+    });
+
+    // Populate catalog and PRODUCT_DATA
+    if (Array.isArray(content.catalog)) {
+      content.catalog.forEach(item => {
+        PRODUCT_DATA[item.id] = {
+          title: item.title,
+          category: item.category_label || item.category,
+          specs: item.specs,
+          price: item.price,
+          img: item.img
+        };
+      });
+      renderCatalogGrid(content.catalog);
+    }
+  } catch (err) {
+    console.error('Error loading content.json:', err);
+  }
+}
+
+// 3. Catalog Filter Tabs
+document.addEventListener('DOMContentLoaded', () => {
+  loadDynamicContent();
+  bindCatalogFilterEvents();
   updateCalc();
 });
 
