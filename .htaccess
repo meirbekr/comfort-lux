@@ -1,0 +1,19 @@
+# Prevent directory browsing
+Options -Indexes
+
+# Protect sensitive files
+<FilesMatch "^\.env|Dockerfile|Makefile|requirements\.txt|.*\.py$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Route /admin to admin/index.html
+    RewriteRule ^admin/?$ admin/index.html [L]
+
+    # Route /api/* to api/index.php if not a direct file
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^api/(.*)$ api/index.php [QSA,L]
+</IfModule>
