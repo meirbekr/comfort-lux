@@ -69,7 +69,7 @@ function switchTab(tabName) {
 
 async function checkAuthAndLoad() {
   try {
-    const res = await fetch('/api/content');
+    const res = await fetch('/api/content/');
     if (res.status === 200) {
       currentData = await res.json();
       if (!Array.isArray(currentData.catalog)) {
@@ -105,7 +105,7 @@ async function handleLogin(e) {
   const loginPass = document.getElementById('login-pass').value.trim();
 
   try {
-    const res = await fetch('/api/login', {
+    const res = await fetch('/api/login/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ login: loginUser, password: loginPass })
@@ -125,7 +125,7 @@ async function handleLogin(e) {
 
 async function handleLogout() {
   try {
-    await fetch('/api/logout', { method: 'POST' });
+    await fetch('/api/logout/', { method: 'POST' });
   } catch (err) {
     console.error('Logout error:', err);
   }
@@ -305,7 +305,7 @@ async function handleFileSelected(event) {
 
   try {
     showToast('Загрузка файла...');
-    const res = await fetch('/api/upload', {
+    const res = await fetch('/api/upload/', {
       method: 'POST',
       body: formData
     });
@@ -342,7 +342,7 @@ async function submitContentForm() {
   };
 
   try {
-    const res = await fetch('/api/content', {
+    const res = await fetch('/api/content/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(currentData)
