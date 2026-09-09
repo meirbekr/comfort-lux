@@ -443,6 +443,13 @@ button {
   font-size: 1.2rem;
   font-weight: 600;
   color: var(--text-main);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.mobile-nav-links a img {
+  display: inline-block;
+  flex-shrink: 0;
 }
 
 /* HERO SECTION */
