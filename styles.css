@@ -1198,6 +1198,28 @@ input[type="range"] {
   font-size: 0.92rem;
   color: var(--text-muted);
 }
+.gis-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #008744;
+  background: rgba(0, 166, 81, 0.08);
+  border: 1px solid rgba(0, 166, 81, 0.25);
+  padding: 4px 12px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+.gis-link:hover {
+  background: #00A651;
+  color: #FFFFFF;
+  border-color: #00A651;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 166, 81, 0.25);
+}
 
 /* TESTIMONIALS */
 .testimonials {
@@ -1395,6 +1417,33 @@ input[type="range"] {
 .footer-address {
   color: #FFFFFF;
   font-size: 0.95rem;
+}
+.footer-gis-link {
+  color: #FFFFFF;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: color var(--transition-fast);
+}
+.footer-gis-link:hover {
+  color: var(--gold-light);
+}
+.footer-gis-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #00A651;
+  background: rgba(0, 166, 81, 0.15);
+  border: 1px solid rgba(0, 166, 81, 0.35);
+  padding: 1px 6px;
+  border-radius: 8px;
+  margin-left: 6px;
+  vertical-align: middle;
+  transition: var(--transition-fast);
+}
+.footer-gis-link:hover .footer-gis-badge {
+  background: #00A651;
+  color: #FFFFFF;
 }
 
 .footer-col-social {
